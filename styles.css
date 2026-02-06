@@ -1,0 +1,254 @@
+/* ===== PALETA ===== */
+:root {
+    --teal: #009CA6;
+    --navy: #073B4C;
+    --light: #EAF6F7;
+    --gray: #4F5D64;
+    --white: #FFFFFF;
+}
+
+/* ===== RESET ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--navy);
+    scroll-behavior: smooth;
+}
+
+/* ===== NAVBAR: LOGO ARRIBA / MENÚ ABAJO ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--white);
+    padding: 20px 20px 10px 20px;
+    display: flex;
+    flex-direction: column; /* LOGO ARRIBA / MENÚ ABAJO */
+    align-items: center;
+    border-bottom: 1px solid #D9E3EA;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.nav-logo span {
+    color: var(--teal);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.nav-links a:hover {
+    color: var(--teal);
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 200px 80px 80px; /* espacio extra por el navbar más alto */
+    background: var(--light);
+    gap: 40px;
+}
+
+.hero-text {
+    width: 52%;
+}
+
+.hero-text h1 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    color: var(--navy);
+}
+
+.intro {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-top: 15px;
+    color: var(--gray);
+}
+
+.hero-img img {
+    width: 650px;
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+/* ===== BOTONES ===== */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 12px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background: var(--teal);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background: var(--navy);
+    color: var(--white);
+}
+
+/* ===== SECCIONES ===== */
+.section {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.alt-section {
+    background: var(--light);
+}
+
+.section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+}
+
+/* ===== QUÉ HACEMOS ===== */
+.qh-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.qh-item {
+    text-align: center;
+}
+
+.qh-icon {
+    width: 65px;
+    margin-bottom: 15px;
+}
+
+.qh-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* ===== CASO HAME ===== */
+.case-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.case-container img {
+    width: 50%;
+    border-radius: 12px;
+}
+
+/* VIÑETAS CORREGIDAS */
+.case-text ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.case-text li {
+    margin-bottom: 10px;
+}
+
+.case-text li::before {
+    content: "✔ ";
+    color: var(--teal);
+    font-weight: bold;
+}
+
+/* ===== POR QUÉ ELEGIRNOS ===== */
+.wide-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.why-icon {
+    width: 60px;
+    margin-bottom: 12px;
+}
+
+.why-item h3 {
+    font-size: 1.25rem;
+}
+
+/* ===== CONTACTO ===== */
+.contact-mail {
+    display: block;
+    font-size: 1.3rem;
+    margin: 12px 0;
+    color: var(--teal);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--navy);
+    color: var(--white);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1050px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 220px 40px 60px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-img img {
+        width: 90%;
+        margin-top: 25px;
+    }
+
+    .nav-links {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .qh-grid,
+    .wide-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .nav-logo {
+        font-size: 2.4rem;
+    }
+}
